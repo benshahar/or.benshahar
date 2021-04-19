@@ -10,13 +10,13 @@
 }
     [class*="col-"]{
     float: left;
-    padding: 50px;
+    padding: 13%px;
     }
 
 /* For desktop: */
 .col-1 {width: 20%;}
 .col-2 {width: 80%;}
-.col-3 {width: 100%;}
+.col-3 {width: 90%;}
 .col-4 {width: 100%;}
 
   @media only screen and (max-width: 1000px){
@@ -25,70 +25,97 @@
      width: 100%;
     }
     [class="col-1"]{
-     height: 50px;
+     height: 50%px;
     }
     [class="col-2"]{
-     height: 50px;
+     height: 50%px;
     }
     [class="col-3"]{
-     height: 50px;
+     height: 50%px;
     }
   }
-
 
   .menu {
     background-color: rgb(225, 225, 225);
-    padding: 20px;
-    height: 5px;
-      width:100%;
-  }
-
-  .main1 {
-     background-color: rgb(255, 255, 255);
-    padding: 80px;
-    height: 50px;
-        width: 980px;
-        margin-top: 1px;
-        margin-left: 14px;
+    padding: 5%px;
+    height: 5%px;
+      width:75%;
+      margin-left: 2%;
       text-align:center;
-       border: 1px solid black;
+
+  }
+
+  .opt1 {
+     background-color: rgb(255, 255, 255);
+    padding: 12%px;
+    height: 20%px;
+        width: 75%px;
+        margin-top: 2%px;
+        margin-left: 15%px;
+      text-align:center;
+       border: 1vw solid black;
 
 
   }
 
-    .main2{
+    .opt2{
    background-color: rgb(255, 255, 255);
-    padding: 80px;
-    height: 50px;
-        width: 980px;
-        margin-top: 13px;
-        margin-left: 14px;
+    padding: 12%px;
+    height: 20%px;
+        width: 75%px;
+        margin-top: 2%px;
+        margin-left: 15%px;
         text-align:center;
-        border: 1px solid black;
+        border: 1vw solid brown;
 
   }
 
-    .main3{
+    .opt3{
     background-color: rgb(255, 255, 255);
-    padding: 80px;
-    height: 50px;
-        width: 980px;
-        margin-top: 13px;
-        margin-left: 14px;
+    padding: 12%px;
+    height: 20%px;
+        width: 75%px;
+        margin-top: 2%px;
+        margin-left: 15%px;
         text-align:center;
-        border: 1px solid black;
+        border: 1vw solid red;
 
 
   }
-    .main4 {
+    .opt4 {
      background-color: rgb(255, 255, 255);
-    padding: 80px;
-    height: 50px;
-        width: 980px;
-        margin-top: 13px;
-        margin-left: 14px;
+    padding: 12%px;
+    height: 20%px;
+        width: 75%px;
+        margin-top: 2%px;
+        margin-left: 15%px;
       text-align:center;
-       border: 1px solid black;
+       border: 1vw solid yellow;
 
 
   }
+@keyframes hoverMe {
+    10% {background-color: blue;}
+    75% {background-color: white;}
+
+}
+    .opt1:hover {
+    animation-name: hoverMe;
+    animation-duration: 1s;
+    animation-iteration-count: 20;
+}
+    .opt2:hover {
+    animation-name: hoverMe;
+    animation-duration: 1s;
+    animation-iteration-count: 20;
+}
+    .opt3:hover {
+    animation-name: hoverMe;
+    animation-duration: 1s;
+    animation-iteration-count: 20;
+}
+    .opt4:hover {
+    animation-name: hoverMe;
+    animation-duration: 1s;
+    animation-iteration-count: 20;
+}
