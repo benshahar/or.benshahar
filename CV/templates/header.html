@@ -1,0 +1,14 @@
+<header>
+	{% if session.get('loggedIn') == False %}
+		<div style="text-align: center"><h1>Welcome, stranger!</h1></div>
+		<form method="get" action="/assignment9">
+			<input type="submit" value="Registration Page">
+		</form>
+		<hr>
+	{% elif session.get('loggedIn') == True %}
+		<div style="text-align: center"><h1>Welcome, {{ session.get('username') }}</h1></div>
+		<form method="post" action="/logout">
+			<input type="submit" value="Log Out">
+		</form>
+	{% endif %}
+</header>
