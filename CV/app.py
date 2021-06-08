@@ -70,3 +70,8 @@ def goMain():
 
 if _name_ == '_main_':
     app.run()
+
+assignment10 = Blueprint('assignment10', __name__,
+                         static_folder='static',
+                         static_url_path='/assignment10',
+                         template_folder='templates')
