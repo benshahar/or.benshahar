@@ -8,19 +8,19 @@
 <body>
 
 {% if didInsert == True %}
-    <h4> A new user was added!</h4>
+    <h4> The user added! thanks</h4>
 {% elif didInsert == False %}
     <h4> User exists already!</h4>
 {% endif %}
 
 {% if didDelete == True %}
-    <h4> A user was deleted from the list!</h4>
+    <h4> The user deleted from the list! thanks</h4>
 {% elif didDelete == False %}
     <h4> User not found, can't delete</h4>
 {% endif %}
 
 {% if didUpdate == True %}
-    <h4> A user was updated!</h4>
+    <h4> A user was updated! thanks</h4>
 {% elif didUpdate == False %}
     <h4> User not found, can't update</h4>
 {% endif %}
