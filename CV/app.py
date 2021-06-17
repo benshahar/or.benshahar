@@ -1,5 +1,5 @@
 
-from flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session,jsonify
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'super secret key'
 
@@ -75,3 +75,26 @@ assignment10 = Blueprint('assignment10', __name__,
                          static_folder='static',
                          static_url_path='/assignment10',
                          template_folder='templates')
+@Users.route('/')
+@Users.route('/assignment11')
+@Users.route('/assignment11/users/')
+def users():
+    if request.method == 'GET':
+        query = "select * from users;"
+        query_result = interact_db(query, query_type='fetch')
+        if len(query_result) == 0:
+            return jsonify({'success': 'False', 'data':[]})
+        else:
+            return jsonify({'success': 'True', 'data':query_result})
+    else:
+        return render_template('Assignment10.html')
+
+@Users.route('/assignment11/users/selected/', defaults={'userId':3})
+@Users.route('/assignment11/users/selected/<int:userId>')
+def select_user(userId):
+    query = "select * from users where id = '%s';" % userId
+    query_result = interact_db(query, query_type='fetch')
+    if len(query_result) == 0:
+        return jsonify('Error, The User Not Exists!')
+    else:
+        return jsonify({'success': 'True', 'data':query_result[0]})
